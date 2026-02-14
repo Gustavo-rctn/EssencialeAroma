@@ -11,11 +11,11 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     background-image: url(Assets/Background-img.jpeg);
     color: white;
-    background-repeat: none;
+    background-repeat: no-repeat;
+    /* corrigido */
     background-position: center top;
     background-attachment: fixed;
     background-color: rgba(0, 0, 0, 0.3);
@@ -30,7 +30,7 @@ header {
     padding: 20px;
     position: fixed;
     z-index: 99;
-    width: 100%
+    width: 100%;
 }
 
 nav {
@@ -42,24 +42,25 @@ nav {
     padding: 0 0 0 100px;
 }
 
-
 nav ul {
     list-style-type: none;
     display: flex;
     gap: 20px;
-    padding: 0;
-    background-color: rgba(255, 255, 255, 0.1);
     padding: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 40px;
     backdrop-filter: blur(15px);
     font-family: 'Cormorant Garamond', serif;
 }
 
-
 nav ul li a {
     position: relative;
     display: inline-block;
     transition: transform 0.4s ease;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Poppins";
 }
 
 nav ul li a::after {
@@ -69,7 +70,7 @@ nav ul li a::after {
     bottom: -6px;
     width: 0%;
     height: 2px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.527 ));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.527));
     transform: translateX(-50%);
     transition: width 0.4s ease;
 }
@@ -80,16 +81,6 @@ nav ul li a:hover {
 
 nav ul li a:hover::after {
     width: 100%;
-}
-
-
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-    font-family: "Poppins";
 }
 
 .logo-marca img {
@@ -109,26 +100,15 @@ button {
 }
 
 button.buttonPrimaria {
-    background-color: #d4af37;
+    background: linear-gradient(90deg, #f0d26f, #d4af37, #b8962e);
     color: black;
     padding: 12px 24px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 0 auto;
-    align-items: start;
     font-size: 30px;
-    background: linear-gradient(90deg,
-            #f0d26f,
-            #d4af37,
-            #b8962e);
-    color: black;
-    padding: 12px 24px;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s ease;
-    font-weight: 400;
 }
-
 
 button.buttonPrimaria a {
     text-decoration: none;
@@ -137,18 +117,14 @@ button.buttonPrimaria a {
 
 button.buttonPrimaria:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 40px rgba(219, 201, 119, 0.8);
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    padding: 12px 24px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 0 40px rgba(219, 201, 119, 0.8);
     transition: all 0.4s;
 }
 
-/* ===== BUTTON SECUNDARIO FINAL ===== */
-
-.buttonSecundario {
+.buttonSecundario,
+.btn-contato {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -160,82 +136,22 @@ button.buttonPrimaria:hover {
     text-decoration: none;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border: none;
-    transition:
-        background 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease,
-        filter 0.25s ease;
-
-        position: relative;
-        overflow: hidden;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 26px;
-        border-radius: 50px;
-        font-family: "Poppins";
-        font-size: 18px;
-        color: white;
-        text-decoration: none;
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: none;
-        transition:
-            background 0.35s ease,
-            border-color 0.35s ease,
-            box-shadow 0.35s ease,
-            filter 0.3s ease;
+    transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, filter 0.3s ease;
 }
 
-.buttonSecundario:hover {
+.buttonSecundario:hover,
+.btn-contato:hover {
     background: rgba(255, 255, 255, 0.16);
     border-color: rgba(255, 255, 255, 0.35);
-
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-
     filter: brightness(1.05);
 }
 
-.buttonSecundario:active {
+.buttonSecundario:active,
+.btn-contato:active {
     filter: brightness(0.98);
 }
-
-
-/* button.buttonSecundario { 
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 12px 24px;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 0 auto;
-    backdrop-filter: blur(10px);
-
-}
-
-button.buttonSecundario {
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-        background 0.45s ease,
-        box-shadow 0.45s ease;
-}
-
-button.buttonSecundario:hover {
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
-
-button.buttonSecundario:active {
-    transform: translateY(0);
-}
-
-
-
-button.buttonSecundario a {
-    text-decoration: none;
-    color: white;
-} */
 
 .divButtons {
     display: flex;
@@ -244,37 +160,41 @@ button.buttonSecundario a {
     gap: 10px;
     padding: 30px;
 }
+button.buttonSecundario a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .Home {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
-    align-items: center;
     text-align: center;
     padding: 80px;
     margin-top: 0px;
+}
 
-    h1 {
-        font-size: 100px;
-        margin-bottom: 20px;
-        padding: 0 20px;
-        color: #000000;
-        font-family: 'Cormorant Garamond', serif;
-        margin-top: 40px;
-    }
+.Home h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    color: #000000;
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 40px;
+}
 
-    p {
-        opacity: 0.9;
-        font-family: poppins, sans-serif;
-        font-size: 27px;
-        padding: 20px 20px;
-        color: #000000;
-    }
+.Home p {
+    opacity: 0.9;
+    font-family: poppins, sans-serif;
+    font-size: 27px;
+    padding: 20px 20px;
+    color: #000000;
 }
 
 .glass-container {
     width: 100%;
-    height: 70%;
+    height: auto;
+    /* corrigido para não quebrar */
     max-width: 2000px;
     max-height: 2000px;
     padding: 70px;
@@ -295,28 +215,61 @@ button.buttonSecundario a {
     padding: 50px;
 }
 
+/* Responsividade para Home e Glass */
+@media (max-width: 1024px) {
+    .Home h1 {
+        font-size: 70px;
+    }
 
+    .Home p {
+        font-size: 22px;
+    }
 
-/* .foto-do-produto { 
-    display: flex;
-    justify-content: end;
-    margin-top: 200px;
-    width: 1000px;
-    height: 1000px;
-    z-index: 99;
-    align-items: end;
-} */
+    .glass-container {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Home {
+        padding: 40px 20px;
+    }
+
+    .Home h1 {
+        font-size: 45px;
+    }
+
+    .Home p {
+        font-size: 18px;
+    }
+
+    .glass-container {
+        padding: 30px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Home h1 {
+        font-size: 32px;
+    }
+
+    .Home p {
+        font-size: 16px;
+    }
+
+    .glass-container {
+        padding: 20px;
+    }
+}
 
 /* ===== SEÇÃO PRODUTOS ===== */
-
-/* ===== SEÇÃO PRODUTOS ===== */
-
 #produtos {
     padding: 80px 40px;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(50, 20, 80, 0.2) 100%);
 }
 
-#produtos > h2 {
+#produtos>h2 {
     text-align: center;
     font-size: 80px;
     color: rgb(0, 0, 0);
@@ -324,7 +277,7 @@ button.buttonSecundario a {
     font-family: Poppins, sans-serif;
 }
 
-#produtos > p {
+#produtos>p {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
     font-size: 18px;
@@ -519,33 +472,32 @@ button.buttonSecundario a {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Responsivo */
+/* Responsivo para Produtos */
 @media (max-width: 768px) {
     .slide-content {
         grid-template-columns: 1fr;
         gap: 30px;
         padding: 30px;
     }
-    
+
     .slide-imagem {
         min-height: 300px;
     }
-    
+
     .produto-carousel-img {
         max-height: 300px;
     }
-    
+
     .slide-info h3 {
         font-size: 28px;
     }
-    
+
     .preco-carousel {
         font-size: 28px;
     }
 }
 
 /* ===== SEÇÃO SOBRE NÓS ===== */
-
 #sobre {
     padding: 80px 40px;
     background: linear-gradient(135deg, rgba(50, 20, 80, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%);
@@ -562,7 +514,7 @@ button.buttonSecundario a {
     color: #d4af37;
     margin-bottom: 30px;
     font-family: 'Cormorant Garamond', serif;
-    font-weight: 300px;
+    font-weight: 300;
 }
 
 #sobre p {
@@ -591,4 +543,245 @@ button.buttonSecundario a {
     display: inline-flex;
     padding: 15px 40px;
     font-size: 18px;
+}
+
+/* Container Pai */
+.conatiner-pai {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+/* Responsividade para Sobre Nós */
+@media screen and (max-width: 1020px) {
+    .conatiner-pai {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-1 {
+        display: none;
+    }
+
+    #sobre h2 {
+        font-size: 36px;
+    }
+
+    #sobre p {
+        font-size: 16px;
+    }
+
+    .sobre-contato h3 {
+        font-size: 20px;
+    }
+
+    .sobre-contato .buttonPrimaria {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ===== Responsividade Geral ===== */
+
+/* Ajustes para telas médias (tablets) */
+@media (max-width: 1024px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .Home h1 {
+        font-size: 70px;
+    }
+
+    .Home p {
+        font-size: 22px;
+    }
+
+    #produtos>h2 {
+        font-size: 60px;
+    }
+
+    .glass-container {
+        padding: 50px;
+    }
+}
+
+/* Ajustes para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .logo-marca img {
+        width: 50px;
+    }
+
+    .Home {
+        padding: 40px 20px;
+    }
+
+    .Home h1 {
+        font-size: 45px;
+    }
+
+    .Home p {
+        font-size: 18px;
+    }
+
+    .glass-container {
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+    #produtos>h2 {
+        font-size: 40px;
+    }
+
+    .slide-info h3 {
+        font-size: 22px;
+    }
+
+    .preco-carousel {
+        font-size: 22px;
+    }
+
+    .divButtons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .buttonPrimaria,
+    .buttonSecundario {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .buttonSecundario {
+        display: none;
+    }
+
+    #sobre h2 {
+        font-size: 36px;
+    }
+
+    #sobre p {
+        font-size: 16px;
+    }
+
+    .sobre-contato h3 {
+        font-size: 20px;
+    }
+
+    .sobre-contato .buttonPrimaria {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+@media screen and (min-width: 768px) {
+    .btn-contato {
+        display: none;
+    }
+}
+
+/* Ajustes extras para telas muito pequenas */
+@media (max-width: 480px) {
+    nav ul {
+        font-size: 14px;
+    }
+
+    .Home h1 {
+        font-size: 32px;
+    }
+
+    .Home p {
+        font-size: 16px;
+    }
+
+    #produtos>h2 {
+        font-size: 28px;
+    }
+
+    .slide-info p {
+        font-size: 14px;
+    }
+
+    .glass-container {
+        padding: 20px;
+    }
+}
+
+/* Ajuste geral para imagens */
+img,
+.produto-carousel-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Evitar header sobrepor conteúdo */
+body {
+    padding-top: 80px;
+    /* ajuste conforme altura real do header */
+}
+
+/* Flexbox com wrap */
+.divButtons {
+    flex-wrap: wrap;
+}
+
+/* Ajustes extras para mobile */
+@media (max-width: 768px) {
+    .slide-content {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .carousel-container {
+        padding: 0 10px;
+    }
+
+    .Home {
+        padding: 20px;
+    }
+
+    .Home h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .Home p {
+        font-size: 16px;
+    }
+
+    #produtos>h2 {
+        font-size: 32px;
+    }
+
+    .glass-container {
+        padding: 20px;
+    }
+}
+.btn-contato{
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.sobre-container{
+    .btn-contato{
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
 }
