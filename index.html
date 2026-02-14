@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Empresa Rebecca</title>
+</head>
+
+<body>
+
+    <div class="glass">
+
+    </div>
+    <header>
+        <!-- Logo da marca e barra de navegação -->
+        <div class="logo-marca"><img src="Assets/Logo.jpeg" alt="Logo da Empresa Rebecca"></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+            </ul>
+        </nav>
+        <div class="buttonContato">
+            <a href="https://wa.me/5519981555552?text=Olá, %20tenho%20interesse%20em%20comprar%20produtos%20da%20Essenciale%20Aroma!"
+                class="buttonSecundario" target="_blank">Contato</a>
+        </div>
+
+    </header>
+    <!-- seção 1 -->
+    <section class="Home" id="home">
+        <div class="hero-glass-container">
+            <div class="glass-container">
+                <h1 class="text-gold">Essenciale Aroma</h1>
+                <p>Essenciale Aroma cria fragrâncias que transformam o dia a dia em momentos especiais. Trabalhamos com
+                    body
+                    splash,
+                    geleias de banho e aromatizadores para ambientes e carros, desenvolvidos para proporcionar frescor,
+                    bem-estar e aconchego.
+                    Cada aroma é pensado com cuidado, unindo qualidade e sofisticação para deixar sua marca por onde
+                    passar.
+                </p>
+                <div class="divButtons">
+                    <button class="buttonPrimaria"><a href="#produtos">Comprar</a></button>
+                </div>
+            </div>
+        </div>
+        <!-- imagem do produto -->
+        <!--<div class="foto-do-produto">
+            <img src="Assets/produto.png" alt="Produto Essenciale Aroma">
+        </div> -->
+
+    </section>
+    <!-- seção 2 -->
+    <section id="produtos">
+        <h2>Nossos Produtos</h2>
+        <p>Confira nossas linhas de produtos essenciais para o seu bem-estar e conforto.</p>
+
+        <!-- CAROUSEL DE GELEIAS -->
+        <div class="produtos-carousel">
+            <div class="carousel-container">
+                <!-- SLIDE 1 - MELANCIA -->
+                <div class="carousel-slide ativo">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Geleia-melancia1.png"
+                                alt="Geleia de melancia">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Melancia</h3>
+                            <p>Textura suave e hidratante que transforma seu banho em um momento de cuidado e
+                                relaxamento.</p>
+
+                            <div class="embalagens-options">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="49.90"
+                                        data-image="Assets/Geleia-melancia1.png">Vidro</button>
+                                    <button class="embalagem-btn-carousel" data-price="25.00"
+                                        data-image="Assets/Geleia-melancia2.png">Plástico P</button>
+                                    <button class="embalagem-btn-carousel" data-price="30.00"
+                                        data-image="Assets/Geleia-melancia3.png">Plástico M</button>
+                                    <button class="embalagem-btn-carousel" data-price="35.00"
+                                        data-image="Assets/Geleia-melancia4.png">Plástico G</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">49.90</span></div>
+                            <button class="buttonPrimaria"><a href="#comprar">Adquirir já</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2 - MORANGO -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Geleia-morangoV.png" alt="Geleia de morango">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Morango</h3>
+                            <p>Textura suave e hidratante que transforma seu banho em um momento de cuidado e
+                                relaxamento.</p>
+
+                            <div class="embalagens-options">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="49.90"
+                                        data-image="Assets/Geleia-morangoV.png">Vidro</button>
+                                    <button class="embalagem-btn-carousel" data-price="25.00"
+                                        data-image="Assets/Geleia-morangoP.png">Plástico P</button>
+                                    <button class="embalagem-btn-carousel" data-price="30.00"
+                                        data-image="Assets/Geleia-morangoM.png">Plástico M</button>
+                                    <button class="embalagem-btn-carousel" data-price="35.00"
+                                        data-image="Assets/Geleia-morangoG.png">Plástico G</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">49.90</span></div>
+                            <button class="buttonPrimaria"><a href="#comprar">Adquirir já</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3 - CEREJA E AVELÃ -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Geleia-cereja-e-avelãV.png"
+                                alt="Geleia de cereja e avelã">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Cereja e Avelã</h3>
+                            <p>Textura suave e hidratante que transforma seu banho em um momento de cuidado e
+                                relaxamento.</p>
+
+                            <div class="embalagens-options">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="49.90"
+                                        data-image="Assets/Geleia-cereja-e-avelãV.png">Vidro</button>
+                                    <button class="embalagem-btn-carousel" data-price="25.00"
+                                        data-image="Assets/Geleia-cereja-e-avelãP.png">Plástico P</button>
+                                    <button class="embalagem-btn-carousel" data-price="30.00"
+                                        data-image="Assets/Geleia-cereja-e-avelãM.png">Plástico M</button>
+                                    <button class="embalagem-btn-carousel" data-price="35.00"
+                                        data-image="Assets/Geleia-cereja-e-avelãG.png">Plástico G</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">49.90</span></div>
+                            <button class="buttonPrimaria"><a href="#comprar">Adquirir já</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 4 - MAÇÃ VERDE -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Geleia-maçã-verdeV.png"
+                                alt="Geleia de maçã verde">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Maçã Verde</h3>
+                            <p>Textura suave e hidratante que transforma seu banho em um momento de cuidado e
+                                relaxamento.</p>
+
+                            <div class="embalagens-options">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="49.90"
+                                        data-image="Assets/Geleia-maçã-verdeV.png">Vidro</button>
+                                    <button class="embalagem-btn-carousel" data-price="25.00"
+                                        data-image="Assets/Geleia-maçã-verdeP.png">Plástico P</button>
+                                    <button class="embalagem-btn-carousel" data-price="30.00"
+                                        data-image="Assets/Geleia-maçã-verdeM.png">Plástico M</button>
+                                    <button class="embalagem-btn-carousel" data-price="35.00"
+                                        data-image="Assets/Geleia-maçã-verdeG.png">Plástico G</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">49.90</span></div>
+                            <button class="buttonPrimaria"><a href="#comprar">Adquirir já</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 5 - PITANGA PRETA -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Geleia-pitanga-pretaV.png"
+                                alt="Geleia de pitanga preta">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Pitanga Preta</h3>
+                            <p>Textura suave e hidratante que transforma seu banho em um momento de cuidado e
+                                relaxamento.</p>
+
+                            <div class="embalagens-options">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="49.90"
+                                        data-image="Assets/Geleia-pitanga-pretaV.png">Vidro</button>
+                                    <button class="embalagem-btn-carousel" data-price="25.00"
+                                        data-image="Assets/Geleia-pitanga-pretaP.png">Plástico P</button>
+                                    <button class="embalagem-btn-carousel" data-price="30.00"
+                                        data-image="Assets/Geleia-pitanga-pretaM.png">Plástico M</button>
+                                    <button class="embalagem-btn-carousel" data-price="35.00"
+                                        data-image="Assets/Geleia-pitanga-pretaG.png">Plástico G</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">49.90</span></div>
+                            <button class="buttonPrimaria"><a href="#comprar">Adquirir já</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 6 - LIXIA E VANILA -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Geleia-lixia-e-vanilaV.png"
+                                alt="Geleia de lixia e vanila">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Lixia e Vanila</h3>
+                            <p>Textura suave e hidratante que transforma seu banho em um momento de cuidado e
+                                relaxamento.</p>
+
+                            <div class="embalagens-options">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="49.90"
+                                        data-image="Assets/Geleia-lixia-e-vanilaV.png">Vidro</button>
+                                    <button class="embalagem-btn-carousel" data-price="25.00"
+                                        data-image="Assets/Geleia-lixia-e-vanilaP.png">Plástico P</button>
+                                    <button class="embalagem-btn-carousel" data-price="30.00"
+                                        data-image="Assets/Geleia-lixia-e-vanilaM.png">Plástico M</button>
+                                    <button class="embalagem-btn-carousel" data-price="35.00"
+                                        data-image="Assets/Geleia-lixia-e-vanilaG.png">Plástico G</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">49.90</span></div>
+                            <button class="buttonPrimaria"><a href="#comprar">Adquirir já</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 7 - MARACUJÁ -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Geleia-maracujaV.png"
+                                alt="Geleia de maracujá">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Maracujá</h3>
+                            <p>Textura suave e hidratante que transforma seu banho em um momento de cuidado e
+                                relaxamento.</p>
+
+                            <div class="embalagens-options">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="49.90"
+                                        data-image="Assets/Geleia-maracujaV.png">Vidro</button>
+                                    <button class="embalagem-btn-carousel" data-price="25.00"
+                                        data-image="Assets/Geleia-maracujaP.png">Plástico P</button>
+                                    <button class="embalagem-btn-carousel" data-price="30.00"
+                                        data-image="Assets/Geleia-maracujaM.png">Plástico M</button>
+                                    <button class="embalagem-btn-carousel" data-price="35.00"
+                                        data-image="Assets/Geleia-maracujaG.png">Plástico G</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">49.90</span></div>
+                            <button class="buttonPrimaria"><a href="#comprar">Adquirir já</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-navigation">
+                <button class="carousel-arrow prev">&lt;</button>
+                <div class="carousel-dots">
+                    <button class="dot ativo" data-slide="0"></button>
+                    <button class="dot" data-slide="1"></button>
+                    <button class="dot" data-slide="2"></button>
+                    <button class="dot" data-slide="3"></button>
+                    <button class="dot" data-slide="4"></button>
+                    <button class="dot" data-slide="5"></button>
+                    <button class="dot" data-slide="6"></button>
+                </div>
+                <button class="carousel-arrow next">&gt;</button>
+            </div>
+    </section>
+
+    <!-- seção 3-->
+    <section id="sobre">
+        <div class="sobre-container">
+            <h2>Sobre Nós</h2>
+            <p>Na Essenciale Aroma, nossa missão é criar fragrâncias que transformam o cotidiano em momentos especiais.
+                Com uma paixão por qualidade e inovação, desenvolvemos produtos que proporcionam frescor,
+                bem-estar e aconchego. Cada aroma é cuidadosamente elaborado para deixar sua marca por onde passar,
+                tornando
+                cada experiência única e memorável.</p>
+        </div>
+    </section>
+
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
