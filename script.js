@@ -1,57 +1,53 @@
 // ===== SISTEMA DE CAROUSEL E SELEÇÃO DE EMBALAGENS =====
 
 document.addEventListener('DOMContentLoaded', function () {
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-    const totalSlides = slides.length;
+    const carousels = document.querySelectorAll('.produtos-carousel');
 
-    // Função para mostrar um slide específico
-    function showSlide(n) {
-        // Remove a classe 'ativo' de todos os slides e dots
-        slides.forEach(slide => slide.classList.remove('ativo'));
-        dots.forEach(dot => dot.classList.remove('ativo'));
+    carousels.forEach(carousel => {
+        let currentSlide = 0;
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dots = carousel.querySelectorAll('.dot');
+        const totalSlides = slides.length;
 
-        // Adiciona a classe 'ativo' ao slide e dot atual
-        slides[n].classList.add('ativo');
-        dots[n].classList.add('ativo');
-    }
+        if (totalSlides === 0) return;
 
-    // Event listeners para os dots de navegação
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', function () {
-            currentSlide = index;
-            showSlide(currentSlide);
-        });
-    });
+        // Função para mostrar um slide específico
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('ativo'));
+            dots.forEach(dot => dot.classList.remove('ativo'));
 
-    // Event listeners para as setas de navegação
-    const prevArrow = document.querySelector('.carousel-arrow.prev');
-    const nextArrow = document.querySelector('.carousel-arrow.next');
-
-    if (prevArrow) {
-        prevArrow.addEventListener('click', function () {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlide);
-        });
-    }
-
-    if (nextArrow) {
-        nextArrow.addEventListener('click', function () {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        });
-    }
-
-    // Navegação por teclado (setas)
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft') {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlide);
-        } else if (e.key === 'ArrowRight') {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
+            if (slides[n]) slides[n].classList.add('ativo');
+            if (dots[n]) dots[n].classList.add('ativo');
         }
+
+        // Event listeners para os dots de navegação
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', function () {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // Event listeners para as setas de navegação
+        const prevArrow = carousel.querySelector('.carousel-arrow.prev');
+        const nextArrow = carousel.querySelector('.carousel-arrow.next');
+
+        if (prevArrow) {
+            prevArrow.addEventListener('click', function () {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                showSlide(currentSlide);
+            });
+        }
+
+        if (nextArrow) {
+            nextArrow.addEventListener('click', function () {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            });
+        }
+
+        // Mostra o primeiro slide ao carregar
+        showSlide(currentSlide);
     });
 
     // ===== SISTEMA DE SELEÇÃO DE EMBALAGENS =====
@@ -89,7 +85,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 50);
         });
     });
-
-    // Mostra o primeiro slide ao carregar
-    showSlide(currentSlide);
 });

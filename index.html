@@ -14,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <title>Empresa Rebecca</title>
 </head>
 
@@ -30,7 +31,7 @@
             <ul>
                 <li><a href="#home">Início</a></li>
                 <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#sobre-nos">Sobre nós</a></li>
             </ul>
         </nav>
         <div class="buttonContato">
@@ -65,9 +66,10 @@
     </section>
     <!-- seção 2 -->
     <section id="produtos">
-        <h2>Nossos Produtos</h2>
+        <h2 style="color: #ffffffbd;">Nossos Produtos</h2>
         <p>Confira nossas linhas de produtos essenciais para o seu bem-estar e conforto.</p>
 
+        <h3 class="categoria-titulo">Geleias de Banho</h3>
         <!-- CAROUSEL DE GELEIAS -->
         <div class="produtos-carousel">
             <div class="carousel-container">
@@ -98,7 +100,9 @@
                             </div>
 
                             <div class="preco-carousel">R$ <span class="preco-valor">49.90</span></div>
-                            <button class="buttonPrimaria"><a href="#comprar">Adquirir já</a></button>
+                            <button class="buttonPrimaria"><a
+                                    href="https://wa.me/5519981555552?text=Olá, %20tenho%20interesse%20em%20comprar%20produtos%20da%20Essenciale%20Aroma!">Adquirir
+                                    já</a></button>
                         </div>
                     </div>
                 </div>
@@ -308,23 +312,261 @@
                 </div>
                 <button class="carousel-arrow next">&gt;</button>
             </div>
+        </div>
+
+        <h3 class="categoria-titulo">Body Splash</h3>
+        <!-- CAROUSEL DE BODY SPLASH -->
+        <div class="produtos-carousel">
+            <div class="carousel-container">
+                <!-- SLIDE 1 - PRADA PARADOXE -->
+                <div class="carousel-slide ativo">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Body-splash-1.png"
+                                alt="Body Splash Prada Paradoxe">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Prada Paradoxe</h3>
+                            <p>Uma fragrância fascinante inspirada em Prada Paradoxe. Perfeita para perfumar sua pele
+                                durante o dia e proporcionar frescor com um toque de elegância.</p>
+
+                            <div class="embalagens-options" style="display: none;">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="39.90"
+                                        data-image="Assets/Body-Splash-Prada.png">Única</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">39.90</span></div>
+                            <button class="buttonPrimaria"><a
+                                    href="https://wa.me/5519981555552?text=Olá, %20tenho%20interesse%20em%20comprar%20o%20Body%20Splash%20Prada%20Paradoxe!">Adquirir
+                                    já</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2 - GOOD GIRL LEGEND -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Body-splash-2.png "
+                                class="Good-Girl-Legend-img" alt="Body Splash Good Girl Legend">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Good Girl Legend</h3>
+                            <p>Inspirada no charme e na sofisticação de Good Girl Legend. Fragrância refrescante que
+                                garante sua presença por onde passar e acompanha seu dia a dia.</p>
+
+                            <div class="embalagens-options" style="display: none;">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="39.90"
+                                        data-image="Assets/Body-Splash-Good-Girl.png">Única</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">39.90</span></div>
+                            <button class="buttonPrimaria"><a
+                                    href="https://wa.me/5519981555552?text=Olá, %20tenho%20interesse%20em%20comprar%20o%20Body%20Splash%20Good%20Girl%20Legend!">Adquirir
+                                    já</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3 - PHANTOM PARFUM -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Body-splash-3.png"
+                                alt="Body Splash Phantom Parfum">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Phantom Parfum</h3>
+                            <p>Uma essência marcante e moderna, inspirada em Phantom Parfum. Desperte seus sentidos com
+                                um aroma duradouro e cheio de atitude.</p>
+
+                            <div class="embalagens-options" style="display: none;">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="39.90"
+                                        data-image="Assets/Body-splash-3.png">Única</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">39.90</span></div>
+                            <button class="buttonPrimaria"><a
+                                    href="https://wa.me/5519981555552?text=Olá, %20tenho%20interesse%20em%20comprar%20o%20Body%20Splash%20Phantom%20Parfum!">Adquirir
+                                    já</a></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- SLIDE 4 - KIT -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/kit.png" alt="Kit de Body Splash">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Kit Body Splash</h3>
+                            <p>Leve para casa as 3 fragrâncias incríveis: Prada Paradoxe, Good Girl Legend e Phantom
+                                Parfum em um kit especial. O combo perfeito para todas as ocasiões!</p>
+
+                            <div class="embalagens-options" style="display: none;">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="99.90"
+                                        data-image="Assets/kit.png">Única</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">99.90</span></div>
+                            <button class="buttonPrimaria"><a
+                                    href="https://wa.me/5519981555552?text=Olá, %20tenho%20interesse%20em%20comprar%20o%20Kit%20de%20Body%20Splash!">Adquirir
+                                    já</a></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-navigation">
+                <button class="carousel-arrow prev">&lt;</button>
+                <div class="carousel-dots">
+                    <button class="dot ativo" data-slide="0"></button>
+                    <button class="dot" data-slide="1"></button>
+                    <button class="dot" data-slide="2"></button>
+                    <button class="dot" data-slide="3"></button>
+                </div>
+                <button class="carousel-arrow next">&gt;</button>
+            </div>
+        </div>
+
+        <h3 class="categoria-titulo">Aromatizador de Ambiente</h3>
+        <!-- CAROUSEL DE AROMATIZADOR -->
+        <div class="produtos-carousel">
+            <div class="carousel-container">
+                <!-- SLIDE 1 - AROMATIZADOR -->
+                <div class="carousel-slide ativo">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Aromatizador-de-ambiente-1.png"
+                                alt="Aromatizador de Ambiente">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Aromatizador de Ambiente</h3>
+                            <p>Uma fragrância sofisticada e aconchegante para deixar o seu ambiente sempre perfumado.
+                                Ideal para transformar a energia de qualquer espaço.</p>
+
+                            <div class="embalagens-options" style="display: none;">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="39.90"
+                                        data-image="Assets/Aromatizador-de-ambiente-1.png">Única</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">39.90</span></div>
+                            <button class="buttonPrimaria"><a
+                                    href="https://wa.me/5519981555552?text=Olá, %20tenho%20interesse%20em%20comprar%20o%20Aromatizador%20de%20Ambiente!">Adquirir
+                                    já</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2 - AROMATIZADOR -->
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-imagem">
+                            <img class="produto-carousel-img" src="Assets/Aromatizador-de-ambiente-2.png"
+                                alt="Aromatizador de Ambiente">
+                        </div>
+                        <div class="slide-info">
+                            <h3>Aromatizador de Ambiente</h3>
+                            <p>Uma fragrância sofisticada e aconchegante para deixar o seu ambiente sempre perfumado.
+                                Ideal para transformar a energia de qualquer espaço.</p>
+
+                            <div class="embalagens-options" style="display: none;">
+                                <h4>Selecione a Embalagem:</h4>
+                                <div class="embalagem-buttons-carousel">
+                                    <button class="embalagem-btn-carousel ativo" data-price="39.90"
+                                        data-image="Assets/Aromatizador-de-ambiente-2.png">Única</button>
+                                </div>
+                            </div>
+
+                            <div class="preco-carousel">R$ <span class="preco-valor">39.90</span></div>
+                            <button class="buttonPrimaria"><a
+                                    href="https://wa.me/5519981555552?text=Olá, %20tenho%20interesse%20em%20comprar%20o%20Aromatizador%20de%20Ambiente!">Adquirir
+                                    já</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-navigation">
+                <button class="carousel-arrow prev">&lt;</button>
+                <div class="carousel-dots">
+                    <button class="dot ativo" data-slide="0"></button>
+                    <button class="dot" data-slide="1"></button>
+                </div>
+                <button class="carousel-arrow next">&gt;</button>
+            </div>
+        </div>
     </section>
 
-    <!-- seção 3-->
-    <section id="sobre">
+
+    <footer class="site-footer" id="sobre-nos">
+        <!-- seção 3-->
         <div class="sobre-container">
-            <h2>Sobre Nós</h2>
-            <p>Na Essenciale Aroma, nossa missão é criar fragrâncias que transformam o cotidiano em momentos especiais.
+
+            <h2 class="sobre-h2">Sobre Nós</h2>
+            <p class="sobre-p">Na Essenciale Aroma, nossa missão é criar fragrâncias que transformam o cotidiano em
+                momentos especiais.
                 Com uma paixão por qualidade e inovação, desenvolvemos produtos que proporcionam frescor,
                 bem-estar e aconchego. Cada aroma é cuidadosamente elaborado para deixar sua marca por onde passar,
                 tornando
                 cada experiência única e memorável.</p>
         </div>
-        <div class="DivButtons">
-            <a href="https://wa.me/5519981555552?text=Olá, %20tenho%20interesse%20em%20comprar%20produtos%20da%20Essenciale%20Aroma!"
-                class="btn-contato" target="_blank">Contato</a>
+        </section>
+
+
+        <!-- Footer Section -->
+        <div class="footer-container">
+            <div class="footer-about">
+                <a href="#home" style="text-decoration: none; display: inline-block;">
+                    <h3 class="footer-brand">Essenciale Aroma</h3>
+                </a>
+                <p>Nossa missão é transformar o seu cotidiano com fragrâncias inesquecíveis, cuidando de cada detalhe
+                    com qualidade, frescor e aconchego.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegue</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Fale Conosco</h4>
+                <div class="contact-info">
+                    <p class="contact-info-zap-p"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5519981555552"> (19) 98155-5552</a></p>
+                    <p><i class="fas fa-envelope"></i> contato@essencialearoma.com.br</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+                    <a href="https://wa.me/5519981555552"><i class="fab fa-whatsapp"></i></a>
+                    <!-- <a href="#"><i class="fab fa-tiktok"></i></a> -->
+                </div>
+            </div>
         </div>
-    </section>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Essenciale Aroma. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 
     <script src="script.js" defer></script>
