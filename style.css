@@ -348,12 +348,12 @@ button.buttonSecundario a {
     padding: 30px;
     background: rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    min-height: 400px;
+    min-height: 500px;
 }
 
 .produto-carousel-img {
     max-width: 100%;
-    max-height: 400px;
+    max-height: 500px;
     object-fit: contain;
     transition: transform 0.4s ease;
 }
@@ -503,11 +503,11 @@ button.buttonSecundario a {
     }
 
     .slide-imagem {
-        min-height: 300px;
+        min-height: 400px;
     }
 
     .produto-carousel-img {
-        max-height: 300px;
+        max-height: 400px;
     }
 
     .slide-info h3 {
