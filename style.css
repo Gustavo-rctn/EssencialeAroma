@@ -316,6 +316,10 @@ button.buttonSecundario a {
     position: relative;
     width: 100%;
     overflow: hidden;
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .carousel-slide {

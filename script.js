@@ -46,6 +46,43 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
+        // ===== SUPORTE A TOUCH (SWIPE) PARA DISPOSITIVOS MÓVEIS =====
+        let touchstartX = 0;
+        let touchstartY = 0;
+        let touchendX = 0;
+        let touchendY = 0;
+
+        carousel.addEventListener('touchstart', function (event) {
+            touchstartX = event.changedTouches[0].screenX;
+            touchstartY = event.changedTouches[0].screenY;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', function (event) {
+            touchendX = event.changedTouches[0].screenX;
+            touchendY = event.changedTouches[0].screenY;
+            handleGesture();
+        }, { passive: true });
+
+        function handleGesture() {
+            const diffX = touchendX - touchstartX;
+            const diffY = touchendY - touchstartY;
+
+            // Checa se o movimento foi majoritariamente horizontal (evita conflito com scroll)
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                // Distância mínima para validar o swipe (50px)
+                if (Math.abs(diffX) > 50) {
+                    if (diffX > 0) {
+                        // Swipe para a direita -> slide anterior
+                        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    } else {
+                        // Swipe para a esquerda -> próximo slide
+                        currentSlide = (currentSlide + 1) % totalSlides;
+                    }
+                    showSlide(currentSlide);
+                }
+            }
+        }
+
         // Mostra o primeiro slide ao carregar
         showSlide(currentSlide);
     });
